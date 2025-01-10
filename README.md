@@ -67,4 +67,3 @@ We’re a team of friends making this project:
 - **Shayan**
 - **Danial**
 - **Amirali**
-
