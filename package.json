@@ -1,15 +1,19 @@
 {
-  "name": "tools",
+  "name": "algoritms",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "db" : "json-server ./src/config/database/db.json",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
     "typescript": "~5.6.2",
     "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
   }
 }
