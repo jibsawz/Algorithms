@@ -48,17 +48,11 @@ You break things into tiny groups, sort each group, and then carefully put them 
 This one’s clever! You pick one thing as the “boss” (pivot), then split everything into “smaller than the boss” and “bigger than the boss.” You keep doing this until it’s sorted.
 
 - **Example:** Picking one toy as a reference and sorting the rest into “smaller” or “bigger” piles around it.
-## Project Structure
-```
-📁 sorting-algorithms
-├── 📄 insertionSort.js
-├── 📄 bubbleSort.js
-├── 📄 selectionSort.js
-├── 📄 shellSort.js
-├── 📄 heapSort.js
-├── 📄 mergeSort.js
-├── 📄 quickSort.js
-└── 📄 README.md
+## How to use project
+```bash
+    npm i
+    npm run dev
+    npm run db
 ```
 
 ## Team Developers
