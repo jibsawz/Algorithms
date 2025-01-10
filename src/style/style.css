@@ -1,0 +1,273 @@
+/*-------------------- Fonts --------------------*/
+
+@font-face {
+  font-family: "secondary-font";
+  src: url("/public/Font/TF2secondary.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BYekan";
+  src: url("/public/Font/BYekan.eot");
+  src: url("/public/Font/BYekan.woff2") format("woff2"),
+    url("/public/Font/BYekan.woff") format("woff"),
+    url("/public/Font/BYekan.ttf") format("truetype");
+}
+
+/*-------------------- Original styles --------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "BYekan", "secondary-font", "tahoma";
+  background-color: #f3f4f4;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header {
+  height: 62px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 263px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 30px 1px #e3e4e4;
+  background-color: #f3f4f4;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+/* search-box */
+header > div:nth-child(1) {
+  border: 1px solid rgb(179, 179, 179);
+  padding: 5px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: #fff;
+  overflow: hidden;
+}
+header > div.search-box {
+  width: max-content;
+}
+
+header > div.search-box > a {
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 8px;
+  color: #aeb9c4;
+}
+
+header > div.search-box > a > i::before {
+  content: "\e8b6";
+  padding: 3px;
+  color: #83919f;
+}
+
+header > div.search-box > a::after {
+  vertical-align: middle;
+}
+
+header > div input {
+  width: 620px;
+  font-size: 16px;
+  height: 18px;
+  border: none;
+  outline: none;
+}
+
+/*-------- icons-menu --------*/
+header > div.icons-menu > ul {
+  width: 180px;
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+  color: #83919f;
+}
+
+header > div.icons-menu > ul > li:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+header > div.icons-menu > ul > li:nth-child(2):hover {
+  background: #d3d3d3;
+  transition: all 0.3s;
+}
+
+header > div.icons-menu > ul > li:nth-of-type(2) > i::before {
+  content: "\f159";
+}
+
+/*------------------------- aside -------------------------*/
+
+aside {
+  width: 262px;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #d0d0d0;
+  background-color: #f3f4f4;
+  padding-right: 12px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+/* title-list */
+aside .title-list {
+  height: 64px;
+  margin: 0 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* list */
+aside .list {
+  margin-right: 5px;
+  overflow-y: scroll;
+}
+
+/* scroll bar */
+aside .list::-webkit-scrollbar {
+  width: 13px;
+  background-color: transparent;
+}
+
+/* track */
+
+/* thumb */
+
+/* h6 */
+aside .list > h6 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a0a7b2;
+  margin: 16px 0;
+  margin-right: 16px;
+}
+
+/* menu */
+
+aside .list ul li {
+  display: flex;
+  align-items: right;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  transition: all 0.3s;
+  height: 43px;
+  margin: 1px;
+  padding-right: 0px;
+  box-sizing: border-box;
+}
+
+aside .list > ul > li {
+  padding: 6px 0px;
+  box-sizing: border-box;
+}
+
+aside .list > ul > li:hover {
+  background-color: #eceded;
+  padding: 6px 0px;
+}
+
+aside .list > ul > li ul li:hover {
+  background-color: #e2e2e2;
+}
+
+aside .list > ul > li ul li ul li:hover {
+  background-color: #d2d2d2;
+}
+
+aside .list > ul > li ul {
+  display: none;
+}
+
+/* a */
+aside .list > ul > li a {
+  height: 100%;
+  width: 100%;
+  padding: 8.5px 10px 8px 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 500;
+  color: #677788;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+/* p */
+aside .list > ul > li a > p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/*------------------------- main --------------------------*/
+
+main {
+  position: absolute;
+  right: 263px;
+  left: 0;
+  top: 62px;
+  z-index: 1;
+}
+
+/*--------- Address-bar ----------*/
+main > .container > div.Address-bar {
+  padding: 25px 30px 30px;
+  box-sizing: border-box;
+}
+
+main > .container > div.Address-bar > h2 {
+  display: inline;
+  font-weight: 400;
+  color: #aeb9c4;
+}
+
+main > .container > div.Address-bar > h2:nth-of-type(2) {
+  color: #5a6b7e;
+}
+
+/* -----footer-right--- */
+.footer > p {
+  text-align: center;
+  color: #677788;
+  font-size: 18px;
+}
+.footer{
+    position: absolute;
+  right: 263px;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.footer > p > a {
+  color: #677788;
+  font-size: 18px;
+  margin: 2px;
+  cursor: pointer;
+}
