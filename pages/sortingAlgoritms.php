@@ -18,20 +18,8 @@
 <body>
   <!------------------------- header ------------------------->
   <header>
-    <!-- search-box -->
-    <div class="search-box">
-      <a href="#">
-        <i class="material-symbols-outlined"></i>
-        <input type="text" name="" id="" placeholder="جستجو">
-      </a>
-    </div>
-    <!-- icons-menu -->
-    <div class="icons-menu">
-      <ul>
-        <li><i class="material-symbols-outlined"></i></li>
-        <li><i class="material-symbols-outlined"></i></li>
-      </ul>
-    </div>
+    
+    
   </header>
   <!------------------------- aside ------------------------->
   <aside>
