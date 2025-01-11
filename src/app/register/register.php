@@ -17,10 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (strlen($password) < 6) {
         $error = "رمز عبور باید حداقل 6 کاراکتر باشد.";
     } else {
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         // Inserting into database
         $stmt = $conn->prepare("INSERT INTO users (fullName, phone, password) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $fullName, $phone, $hashed_password);
+        $stmt->bind_param("sss", $fullName, $phone, $password);
         // Going to login.html
         if ($stmt->execute()) {
             header("Location: ../../../pages/login.html");
