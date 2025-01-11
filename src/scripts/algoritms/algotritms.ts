@@ -1,3 +1,4 @@
+//selection sort
 function selectionSort(arr : number[]) {
   const n = arr.length;
 
@@ -14,6 +15,22 @@ function selectionSort(arr : number[]) {
   }
   return arr
 }
+//bubble sort
+function bubbleSort(arr : number[]) {
+  for (let i in arr) {
+    for (let j = 0; j < arr.length - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        //swap
+        let arrEl1 = arr[j];
+        let arrEl2 = arr[j + 1];
 
+        arr[j] = arrEl2;
+        arr[j + 1] = arrEl1;
+      }
+    }
+  }
+
+  return arr;
+}
 
 export {selectionSort}
