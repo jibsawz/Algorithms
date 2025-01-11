@@ -18,7 +18,11 @@ if (isset($_SERVER['HTTP_REFERER'])) {
         function redirectToPreviousPage() {
             setTimeout(function () {
                 window.history.back();
+<<<<<<< Updated upstream
             }, 2000);
+=======
+            }, 2000); // 5000 میلی‌ثانیه = 5 ثانیه
+>>>>>>> Stashed changes
         }
         redirectToPreviousPage();
     </script>
