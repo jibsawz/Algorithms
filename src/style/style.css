@@ -57,6 +57,10 @@ header > div:nth-child(1) {
   border-radius: 50px;
   background-color: #fff;
   overflow: hidden;
+  
+}
+header > div:nth-child(1) input{
+  font-family: "BYekan";
 }
 header > div.search-box {
   width: max-content;
