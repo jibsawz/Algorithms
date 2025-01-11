@@ -32,5 +32,23 @@ function bubbleSort(arr : number[]) {
 
   return arr;
 }
+//insertion sort
+function insertionSort(arr:number[]) {
+  for (let i in arr) {
+    if (arr[i] < arr[i - 1]) {
+      let j = i;
 
+      while (arr[j] < arr[j - 1] && j > 0) {
+        let arrEl1 = arr[j];
+        let arrEl2 = arr[j - 1];
+
+        arr[j] = arrEl2;
+        arr[j - 1] = arrEl1;
+        j -= 1;
+      }
+    }
+  }
+
+  return arr
+}
 export {selectionSort}
