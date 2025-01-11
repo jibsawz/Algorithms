@@ -84,6 +84,11 @@ if ($role === 'admin') {
             قیمت لحظه ای بیت کوین
           </a>
         </li>
+        <li>
+          <a href="/pages/shadowGenerator.php"><span class="material-symbols-outlined"> </span>
+          سایه ساز
+          </a>
+        </li>
       </ul>
       <h6>متفرقه</h6>
       <ul>

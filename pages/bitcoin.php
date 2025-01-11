@@ -64,6 +64,11 @@ include '../src/app/auth.php';
             قیمت لحظه ای بیت کوین
           </a>
         </li>
+        <li>
+          <a href="/pages/shadowGenerator.php"><span class="material-symbols-outlined"> </span>
+            سایه ساز
+          </a>
+        </li>
       </ul>
       <h6>متفرقه</h6>
       <ul>
@@ -95,20 +100,20 @@ include '../src/app/auth.php';
 
       <!-- Address-bar -->
       <div class="Address-bar">
-          <h2>قیمت بیتکوین</h2>
+        <h2>قیمت بیتکوین</h2>
       </div>
       <div id="bitcoin">
         <div id="bitcoin-icon" class="bitcoin-icon">
           <span id="bitcoin-text" class="bitcoin-text"></span>
         </div>
-    
+
         <div id="bitcoin-info" class="bitcoin-info"></div>
       </div>
-     
-    </main>
-    <div class="footer">
-        <p> طراحی شده با ❤️ ارائه شده در تیم<a> Generation 8 </a></p>
-    </div>
+
+  </main>
+  <div class="footer">
+    <p> طراحی شده با ❤️ ارائه شده در تیم<a> Generation 8 </a></p>
+  </div>
   <script type="module" src="/src/scripts/bitcoin/bitcoin.js"></script>
 
 </body>
