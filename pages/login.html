@@ -14,28 +14,24 @@
     <div class="login-card">
         <div class="column">
             <h1>ورود</h1>
-            
-            <form>
+            <form method="post" action="../src/app/login/login.php">
                 <div class="form-item">
-                    <input type="number" maxlength="11" class="form-element" id="phone" placeholder="شماره موبایل">
+                    <input type="number" maxlength="11" class="form-element" id="phone" placeholder="شماره موبایل" name="phone">
                 </div>
                 <div class="form-item">
-                    <input type="password" class="form-element" id="password" placeholder="رمز عبور">
+                    <input type="password" class="form-element" id="password" placeholder="رمز عبور" name="password">
                 </div>
                 <div class="form-checkbox-item">
                     <input type="checkbox" id="rememberMe" checked>
                     <label for="rememberMe">من را به خاطر بسپار</label>
                 </div>
                 <div class="flex">
-                    <button id="loginBtn" type="button">
-                        ورود
-                    </button>
+                    <input type="submit" value="وارد شوید">
                     <div class="rest">
                         <p>شما اکانت ندارید ؟</p>
                         <a href="/pages/singup.html">ثبت نام</a>
                     </div>
                 </div>
-                
             </form>
         </div>
         <div class="column">

@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ثبت نام </title>
-    <link rel="stylesheet" href="/src/style/singup.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ثبت نام </title>
+<link rel="stylesheet" href="/src/style/singup.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 <body dir="rtl">
@@ -15,15 +10,15 @@
         <div class="column">
             <h1>ثبت نام</h1>
             
-            <form>
+            <form method="post" action="../src/app/register/register.php">
                 <div class="form-item">
-                    <input type="text" class="form-element" placeholder="نام و نام خانوادگی">
+                    <input type="text" class="form-element" placeholder="نام و نام خانوادگی" id="fullName" name="fullName">
                 </div>
                 <div class="form-item">
-                    <input type="text" maxlength="11" class="form-element" placeholder="شماره موبایل">
+                    <input type="text" maxlength="11" class="form-element" placeholder="شماره موبایل" id="phone" name="phone">
                 </div>
                 <div class="form-item">
-                    <input type="password" class="form-element" placeholder="رمز عبور">
+                    <input type="password" class="form-element" placeholder="رمز عبور" id="password" name="password">
                 </div>
                 
                 <div class="form-checkbox-item">
@@ -31,15 +26,12 @@
                     <label for="rememberMe">من را به خاطر بسپار</label>
                 </div>
                 <div class="flex">
-                    <button type="button">
-                        ثبت نام
-                    </button>
+                <input type="submit" id="submit" value="ثبت نام">
                     <div class="rest">
                         <p>شما اکانت دارید ؟</p>
                         <a href="/pages/login.html">ورود</a>
                     </div>
-                </div>
-                
+                </div>                
             </form>
         </div>
         <div class="column">
@@ -48,7 +40,4 @@
             <a href="/pages/login.html">ورود</a>
         </div>
     </div>
-    
 </body>
-
-</html>
