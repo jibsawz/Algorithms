@@ -43,7 +43,7 @@
     <div class="list">
       <ul>
         <li>
-          <a href="/pages/profile.html">
+          <a href="/pages/profile.php">
             <span class="material-symbols-outlined">person </span>
             <p>پروفایل</p>
           </a>
@@ -52,12 +52,12 @@
       <h6>برنامه ها و صفحات</h6>
       <ul>
         <li>
-          <a href="/pages/sortingAlgoritms.html"><span class="material-symbols-outlined"> </span>
+          <a href="/pages/sortingAlgoritms.php"><span class="material-symbols-outlined"> </span>
            مرتب سازی ارایه اعداد
           </a>
         </li>
         <li>
-          <a href="/pages/bitcoin.html"><span class="material-symbols-outlined"> </span>
+          <a href="/pages/bitcoin.php"><span class="material-symbols-outlined"> </span>
             قیمت لحظه ای بیت کوین
           </a>
         </li>
@@ -77,7 +77,7 @@
           </a>
         </li>
         <li>
-          <a href="/pages/developes.html">
+          <a href="/pages/developes.php">
             <span class="material-symbols-outlined">code</span>
             توسعه دهندگان
           </a>
