@@ -2,17 +2,15 @@
 session_start();
 include '../src/app/db.php';
 include '../src/app/auth.php'; 
-
+// Cheking the identity of the user
 $user_id = $_SESSION['user_id'];
-
 $stmt = $conn->prepare("SELECT fullName, phone, role FROM users WHERE id = ?");
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $stmt->bind_result($fullName, $phone, $role);
 $stmt->fetch();
 $stmt->close();
-
-// if user role is admin        
+// if he has admin role he can see all datas from db
 if ($role === 'admin') {
     $stmt = $conn->prepare("SELECT fullName, phone , password , role FROM users");
     $stmt->execute();
