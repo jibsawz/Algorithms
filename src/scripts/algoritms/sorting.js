@@ -1,12 +1,14 @@
-import { selectionSort } from "./algotritms"
+import { selectionSort } from "./algotritms.js"
 let numberGetter = document.querySelector("#addingNum input")
 let addNumber = document.getElementById("addNumber")
 let sort = document.getElementById("sort")
 let reset = document.getElementById("reset")
 let result = document.getElementById("result")
+console.log("object");
 
-let arr: number[] = []
 
+
+let arr = []
 function eventListeners() {
     addNumber?.addEventListener("click", setNumber)
     sort?.addEventListener("click", sorting)

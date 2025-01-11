@@ -110,7 +110,7 @@ include '../src/app/auth.php';
         <p> طراحی شده با ❤️ ارائه شده در تیم<a> Generation 8 </a></p>
     </div>
   <script type="module" src="/src/scripts/bitcoin/bitcoin.js"></script>
-  <script type="module" src="/src/scripts/main.ts"></script>
+
 </body>
 
 </html>

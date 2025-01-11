@@ -1,5 +1,5 @@
 //selection sort
-function selectionSort(arr : number[]) {
+function selectionSort(arr ) {
   const n = arr.length;
 
   for (let i = 0; i < n - 1; i++) {
@@ -16,7 +16,7 @@ function selectionSort(arr : number[]) {
   return arr
 }
 //bubble sort
-function bubbleSort(arr : number[]) {
+function bubbleSort(arr ) {
   for (let i in arr) {
     for (let j = 0; j < arr.length - i; j++) {
       if (arr[j] > arr[j + 1]) {
@@ -33,7 +33,7 @@ function bubbleSort(arr : number[]) {
   return arr;
 }
 //insertion sort
-function insertionSort(arr:number[]) {
+function insertionSort() {
   for (let i in arr) {
     if (arr[i] < arr[i - 1]) {
       let j = i;

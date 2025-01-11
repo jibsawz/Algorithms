@@ -1,6 +1,4 @@
-<?php
-include '../src/app/auth.php';
-?>
+
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
 <head>
@@ -125,8 +123,8 @@ include '../src/app/auth.php';
     <div class="footer">
         <p> طراحی شده با ❤️ ارائه شده در تیم<a> Generation 8 </a></p>
     </div>
-  <script type="module" src="/src/scripts/algoritms/sorting.ts"></script>
-  <script type="module" src="/src/scripts/main.ts"></script>
+  <script type="module" src="./../src/scripts/algoritms/sorting.js"></script>
+  <!-- <script type="module" src="/src/scripts/main.ts"></script> -->
 </body>
 
 </html>

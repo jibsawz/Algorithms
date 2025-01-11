@@ -12,7 +12,7 @@ $stmt->bind_result($fullName, $phone, $role);
 $stmt->fetch();
 $stmt->close();
 
-// اگر کاربر ادمین باشد، همه کاربران را نمایش دهید
+// if user role is admin        
 if ($role === 'admin') {
     $stmt = $conn->prepare("SELECT fullName, phone , password , role FROM users");
     $stmt->execute();

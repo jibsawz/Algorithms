@@ -1,4 +1,4 @@
-import axios from "axios";
+
 
 const bitcoinIcon = document.getElementById("bitcoin-icon");
 const bitcoinInfo = document.getElementById("bitcoin-info");
@@ -12,7 +12,8 @@ bitcoinIcon.addEventListener("click", () => {
       bitcoinIcon.style.display = "none";
       bitcoinInfo.classList.remove("hidden");
       bitcoinInfo.style.display = "block";
-      let price =await getBitcoinPrices()
+      
+      let price = await getBitcoinPrices()
       bitcoinInfo.innerHTML =  `<div>
       <p>قیمت بیتکوین به دلار : ${price.usd} </p>
       <p>قیمت بیتکوین به ریال : ${price.toman.toLocaleString()} </p>
@@ -28,11 +29,12 @@ bitcoinIcon.addEventListener("click", () => {
 async function getBitcoinPrices() {
   try {
     // قیمت بیت‌کوین به دلار
-    const response = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+    const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')
     const btcPrice = response.data.bitcoin.usd; // قیمت بیت‌کوین به دلار
 
     // قیمت بیت‌کوین به تومان
-    const nobitexRes = await axios.post('https://api.nobitex.ir/market/stats', {
+    const nobitexRes = await fetch('https://api.nobitex.ir/market/stats', {
+      method : "POST",
       srcCurrency: 'btc',
       dstCurrency: 'rls',
     });
