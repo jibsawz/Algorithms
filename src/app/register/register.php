@@ -1,31 +1,38 @@
-<?php 
+<?php
 include '../db.php';
+include '../previousPage.php';
+$error = '';
 
+
+// Getting input values from signup.html
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo '<pre>';
-    print_r($_POST);
-    echo '</pre>';
-
-    if (isset($_POST['fullName']) && isset($_POST['phone']) && isset($_POST['password'])) {
-        $fullName = $_POST['fullName'];
-        $phone = preg_replace('/[^0-9]/', '', $_POST['phone']);
-        $password = $_POST['password'];
-
-        if (!empty($fullName) && !empty($phone) && !empty($password)) {
-            $stmt = $conn->prepare("INSERT INTO users (fullName, phone, password) VALUES (?, ?, ?)");
-            $stmt->bind_param("sss", $fullName, $phone, $password);
-
-            if ($stmt->execute()) {
-                header(header: "Location: ../../../pages/login.html");
-            } else {
-                echo "Error: " . $stmt->error;
-            }
-
-            $stmt->close();
-        } else {
-            echo "All fields are required!";
-        }
+    $fullName = $_POST['fullName'];
+    $phone = preg_replace('/[^0-9]/', '', $_POST['phone']);
+    $password = $_POST['password'];
+// Validations : 
+    if (empty($fullName) || empty($phone) || empty($password)) {
+        $error = "لطفاً همه فیلدها را پر کنید.";
+    } elseif (!preg_match('/^[0-9]{11}$/', $phone)) {
+        $error = "شماره موبایل نامعتبر است.";
+    } elseif (strlen($password) < 6) {
+        $error = "رمز عبور باید حداقل 6 کاراکتر باشد.";
     } else {
-        echo "Form data is missing!";
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        // Inserting into database
+        $stmt = $conn->prepare("INSERT INTO users (fullName, phone, password) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $fullName, $phone, $hashed_password);
+        // Going to login.html
+        if ($stmt->execute()) {
+            header("Location: ../../../pages/login.html");
+            exit();
+        } else {
+            $error = "Error: " . $stmt->error;
+        }
+
+        $stmt->close();
     }
 }
+// Printing The error
+if (!empty($error)): ?>
+    <p class="error"><?php echo $error; ?></p>
+<?php endif; ?>
