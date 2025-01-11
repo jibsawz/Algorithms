@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+  }
+  
+  .bitcoin-icon {
+    width: 400px;
+    height: 400px;
+    background-image: url('https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=023');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 20px rgba(255, 165, 0, 0.5); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .bitcoin-icon:hover {
+    box-shadow: 0px 6px 30px rgba(255, 165, 0, 0.8);
+    transform: scale(1.05); 
+  }
+  
+  .bitcoin-info {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD700;
+    display: none;
+    opacity: 1;
+    transition: opacity 1s ease-in-out; 
+  }
+  
+  .bitcoin-info.show {
+    display: block;
+    opacity: 1;
+  }
+  
+  canvas {
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+  }
+  
+  @keyframes spinUpAndFall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-200px) rotate(360deg);
+    }
+    100% {
+      transform: translateY(1000px) rotate(360deg);
+    }
+  }
+  
+  .bitcoin-icon.spin {
+    animation: spinUpAndFall 1.5s ease-in-out forwards;
+  }
+  
