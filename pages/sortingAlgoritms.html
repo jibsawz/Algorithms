@@ -7,11 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- links -->
   <link rel="stylesheet" href="/src/style/style.css">
+  <link rel="stylesheet" href="/src/style/sorting.css">
   <!-- icons -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-  <title>توسعه دهندگان</title>
+  <title>مرتب سازی ارایه</title>
 </head>
 
 <body>
@@ -86,14 +87,38 @@
 
       <!-- Address-bar -->
       <div class="Address-bar">
-        <h2>توسعه دهندگان</h2>
+           <h2>مرتب سازی ارایه اعداد</h2>
       </div>
-      
+      <div id="gettingNumber">
+        <div id="app">
+            <div class="app-child">
+                <div>
+                    <div id="radioInput">
+                
+                    </div>
+                    <div id="addingNum">
+                        <input type="text">
+                    </div>
+                </div>
+                <div>
+                    <button id="addNumber">ثبت عدد</button>
+                    <button id="sort">مرتب سازی</button>
+                    <button id="reset">ریست</button>
+                </div>
+            </div>
+            <div class="app-child">
+                <h4>خروجی</h4>
+                <div style="font-family: 'dirooz';" id="result">
+                    برای شروع اعدادی وارد کنید
+                </div>
+            </div>
+        </div>
+      </div>
     </main>
     <div class="footer">
         <p> طراحی شده با ❤️ ارائه شده در تیم<a> Generation 8 </a></p>
     </div>
-  <script type="module" src="./src/scripts/main.ts"></script>
+  <script type="module" src="/src/scripts/algoritms/sorting.ts"></script>
 </body>
 
 </html>

@@ -12,4 +12,8 @@ function selectionSort(arr : number[]) {
     // Smallest converter with current element
     [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]];
   }
+  return arr
 }
+
+
+export {selectionSort}
