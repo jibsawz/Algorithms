@@ -54,6 +54,7 @@ function insertionSort() {
 export { selectionSort };
 
 // merge algorithm
+
 function merge(A, B) {
   // Result array to store the merged list
   const C = [];
@@ -88,4 +89,27 @@ function merge(A, B) {
   }
   // Return the fully merged and sorted array
   return C;
+}
+
+// quick sort algorithm
+
+function quickSort(arr) {
+  // If the array length is one or less, it's already sorted
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  // Choose the pivot
+  const pivot = arr[Math.floor(arr.length / 2)];
+
+  // Divide the array into three parts
+  // Elements smaller than the pivot
+  const left = arr.filter((num) => num < pivot);
+  // Elements equal to the pivot
+  const middle = arr.filter((num) => num === pivot);
+  // Elements greater than the pivot
+  const right = arr.filter((num) => num > pivot);
+
+  // Recursive: Sort the left and right parts
+  return [...quickSort(left), ...middle, ...quickSort(right)];
 }
