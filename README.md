@@ -1,63 +1,30 @@
-# Sorting Algorithms
+# Toolbox
 
-*Hey there! Welcome to our repository. We’ve been having some fun writing sorting algorithms in JavaScript, and we’d love to share them with you. Sorting might sound fancy, but it’s basically just putting things in the right order, like tidying up your room! Here’s what we’ve got:*
+Hello ! Welcome to our project. This is a complete application with both frontend and backend, designed to host a variety of practical tools. Whether you’re here to explore, learn, or use these tools in your own projects
 
-1. **Insertion Sort**
-2. **Bubble Sort**
-3. **Selection Sort**
-4. **Shell Sort**
-5. **Heap Sort**
-6. **Merge Sort**
-7. **Quick Sort**
+## What’s it project?
+This project is all about creating useful tools that you can rely on. It’s a full-fledged application with modern frontend and backend technologies
 
+### Tools So Far:
+1. **Shadow Creator**: Generate and customize CSS shadows easily.
+2. **Live Bitcoin Price Tracker**: Stay updated with real-time Bitcoin price changes.
+3. **Number Sorter**: Quickly and efficiently sort numbers in different ways.
 
+And we’re not stopping here—new tools are on the way!
 
-## Let’s Talk About the Algorithms
+## Features
+- **Authentication System**: Only authenticated users can access the tools.
+- **Role Management**: Two roles—Admin and User—determine access and privileges.
+- **User Panel**: A clean and functional dashboard for users to manage their activities.
+- **Secure Access**: No access to any part of the project without logging in.
 
-### 1. Insertion Sort
-Imagine you’re sorting cards in your hand. You pick one card at a time and put it in the right place among the cards you’ve already sorted. Easy, right?
+## Why We Built This Project
+We wanted to create something practical and user-friendly—a place where you can find tools that save time and effort. 
 
-- **Example:** When you’re putting books on a shelf, you place each book where it fits by size.
+## Developers Team
+We’re a group of friends passionate about coding and building helpful tools. Here’s who we are:
 
-### 2. Bubble Sort
-This is like blowing bubbles! You keep comparing two bubbles next to each other, and if one is bigger, it floats up. You keep doing this until all the bubbles are in order.
-
-- **Example:** Imagine sorting a row of kids by height. You compare two kids at a time and swap them if they’re in the wrong order.
-
-### 3. Selection Sort
-Think about picking the smallest item from a pile over and over. Once you find the smallest, you move it to a sorted pile and keep going.
-
-- **Example:** Sorting your crayons by color, starting with the lightest.
-
-### 4. Shell Sort
-This is like Insertion Sort but smarter. Instead of comparing nearby items, you compare items far apart and slowly bring them closer together to sort.
-
-- **Example:** When sorting a messy box of toys, you start by grouping similar ones (like cars and blocks) before putting them in exact order.
-
-### 5. Heap Sort
-Picture a neat stack of pancakes. You always take the biggest pancake from the stack, put it on your plate, and repeat until you have them all sorted.
-
-- **Example:** Organizing a pile of plates by size, starting with the largest.
-
-### 6. Merge Sort
-You break things into tiny groups, sort each group, and then carefully put them back together in order. 
-
-- **Example:** Organizing puzzle pieces by sorting small sections and then connecting them.
-
-### 7. Quick Sort
-This one’s clever! You pick one thing as the “boss” (pivot), then split everything into “smaller than the boss” and “bigger than the boss.” You keep doing this until it’s sorted.
-
-- **Example:** Picking one toy as a reference and sorting the rest into “smaller” or “bigger” piles around it.
-## How to use project
-```bash
-    npm i
-    npm run dev
-    npm run db
-```
-
-## Team Developers
-We’re a team of friends making this project:
-- **Reza**
+- **Reza** *(Team Lead)*
 - **Shayan**
 - **Danial**
 - **Amirali**
