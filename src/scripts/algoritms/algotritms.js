@@ -1,5 +1,5 @@
 //selection sort
-function selectionSort(arr ) {
+function selectionSort(arr) {
   const n = arr.length;
 
   for (let i = 0; i < n - 1; i++) {
@@ -13,10 +13,10 @@ function selectionSort(arr ) {
     // Smallest converter with current element
     [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]];
   }
-  return arr
+  return arr;
 }
 //bubble sort
-function bubbleSort(arr ) {
+function bubbleSort(arr) {
   for (let i in arr) {
     for (let j = 0; j < arr.length - i; j++) {
       if (arr[j] > arr[j + 1]) {
@@ -49,6 +49,43 @@ function insertionSort() {
     }
   }
 
-  return arr
+  return arr;
 }
-export {selectionSort}
+export { selectionSort };
+
+// merge algorithm
+function merge(A, B) {
+  // Result array to store the merged list
+  const C = [];
+  // Pointer for the current position in array A
+  let i = 0,
+    // Pointer for the current position in array B
+    j = 0;
+
+  // Merge elements from both arrays while both have remaining items
+  while (i < A.length && j < B.length) {
+    if (A[i] < B[j]) {
+      // Add the smaller element from A to the result
+      C.push(A[i]);
+      i++;
+    } else {
+      // Add the smaller element from B to the result
+      C.push(B[j]);
+      j++;
+    }
+  }
+
+  // Append any remaining elements from A
+  while (i < A.length) {
+    C.push(A[i]);
+    i++;
+  }
+
+  // Append any remaining elements from B
+  while (j < B.length) {
+    C.push(B[j]);
+    j++;
+  }
+  // Return the fully merged and sorted array
+  return C;
+}
