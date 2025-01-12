@@ -55,7 +55,7 @@ export { selectionSort };
 
 // merge algorithm
 
-function merge(A, B) {
+function merge(arr1, arr2) {
   // Result array to store the merged list
   const C = [];
   // Pointer for the current position in array A
