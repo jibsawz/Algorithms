@@ -132,4 +132,35 @@ function shellSort(arr) {
     }
   }
   return arr;
+} 
+  // Heap sort algorithm
+function heapSort(arr) {
+  function heapify(arr, n, i) {
+      let largest = i;
+      let left = 2 * i + 1;
+      let right = 2 * i + 2;
+
+      if (left < n && arr[left] > arr[largest]) largest = left;
+      if (right < n && arr[right] > arr[largest]) largest = right;
+
+      if (largest !== i) {
+          [arr[i], arr[largest]] = [arr[largest], arr[i]]; // Swap
+          heapify(arr, n, largest);
+      }
+  }
+
+  let n = arr.length;
+
+  // Build max heap
+  for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+      heapify(arr, n, i);
+  }
+
+  // Extract elements
+  for (let i = n - 1; i > 0; i--) {
+      [arr[0], arr[i]] = [arr[i], arr[0]];
+      heapify(arr, i, 0);
+  }
+
+  return arr;
 }
