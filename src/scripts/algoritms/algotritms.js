@@ -113,3 +113,23 @@ function quickSort(arr) {
   // Recursive: Sort the left and right parts
   return [...quickSort(left), ...middle, ...quickSort(right)];
 }
+
+// shell short
+function shellSort(arr) {
+  let n = arr.length;
+  // Start with an initial gap
+  for (let gap = Math.floor(n / 2); gap > 0; gap = Math.floor(gap / 2)) {
+    // Perform a gapped insertion sort for this gap size
+    for (let i = gap; i < n; i++) {
+      let temp = arr[i];
+      let j;
+      // Shift elements of the sorted segment to make space for the current element
+      for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) {
+        arr[j] = arr[j - gap];
+      }
+      // Place the current element at its correct position
+      arr[j] = temp;
+    }
+  }
+  return arr;
+}
